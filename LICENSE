@@ -1,14 +1,27 @@
-# Cursors:
+# Cursor artwork
 
-`src/win/` are packaged under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
+The cursor artwork downloaded through this project's catalog, and the cursor
+images and thumbnails in its generated themes, are distributed under
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-They are packaged with explicit author permission
+The upstream project records explicit author permission to modify and
+redistribute this artwork:
+https://github.com/ashuramaruzxc/anime-cursors#media-assets
 
-Please check their work: [https://www.pixiv.net/en/users/345405](https://www.pixiv.net/en/users/345405)
+Artwork by 夜夢（よるむ）:
+https://www.pixiv.net/en/users/345405
 
-# Other files
+Each generated catalog theme includes an ATTRIBUTION.txt identifying its
+original artwork sources and conversion changes, together with the original
+author notices where supplied. The CC license applies to the artwork, including
+converted images, rather than to the conversion code.
 
-All other code in this repository is distributed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt)
+# Conversion code
+
+The conversion code in this repository is distributed under
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt).
+Its license does not replace the artwork's license. Artwork supplied separately
+to the general-purpose converter remains subject to its own license.
 
 Attribution-NonCommercial-ShareAlike 4.0 International
 
