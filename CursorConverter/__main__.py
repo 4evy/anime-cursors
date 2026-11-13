@@ -5,6 +5,7 @@ import argparse
 import json
 import logging
 import os
+import unicodedata
 from io import BytesIO
 from multiprocessing.pool import Pool
 from pathlib import Path
@@ -28,11 +29,12 @@ def rename_files(
 
     for file_path in files_to_rename:
         name, extension = os.path.splitext(file_path.name)
+        name = unicodedata.normalize("NFKC", name)
         matched = False
 
         for en, value in rename_map.items():
             for jp in value:
-                if jp in name:
+                if unicodedata.normalize("NFKC", jp) in name:
                     matched = True
                     old_name = f"{jp}{extension}"
                     old_file_path = str(file_path.parent / file_path.name)

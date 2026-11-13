@@ -26,6 +26,9 @@ for building animated and static cursors primarily made by
 
 ## Usage
 
+Japanese filename matching accepts full-width and ASCII digits, including the
+bundled text-selection, resize, and handwriting variants.
+
 If you have animated or static (.ani | .cur) files you can simply run:
 
     python -m CursorConverter --prefix /Path/To/Directory With Cursors
