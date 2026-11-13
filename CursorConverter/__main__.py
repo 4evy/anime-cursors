@@ -11,9 +11,7 @@ from pathlib import Path
 from string import Template
 from typing import Any, Dict, List, Tuple
 
-from cursorgen.parser import open_blob
-from cursorgen.writer import to_x11
-from PIL import Image
+from CursorConverter.worker import process
 
 vcs_path = Path(__file__).parents[1]
 root_path = os.path.dirname(__file__)
@@ -98,27 +96,6 @@ def load_help_menu(json_file: str = f"{root_path}/config/menu.json") -> Any:
     with open(json_file, "r", encoding="utf-8") as file:
         help_menu = json.load(file)
     return help_menu
-
-
-def process(arg: Tuple[BytesIO, str, Path, Dict[str, List[str]], List[int]]) -> None:
-    stream, name, output, mapping, sizes = arg
-    blob = stream.getvalue()
-
-    cursors = open_blob(blob)
-    result = to_x11(frames=cursors.frames, sizes=sizes)
-
-    if name in mapping:
-        for xcursor_name in mapping[name]:
-            final = os.path.join(output, "cursors", xcursor_name)
-            with open(final, "wb") as fs:
-                fs.write(result)
-
-    if name == "idle":
-        frame = cursors.frames[0]
-        cursor = frame[0]
-        png = cursor.image
-        png = png.resize((320, 320), Image.Resampling.NEAREST)
-        png.save(f"{output}/thumb.png", "PNG")
 
 
 def main() -> None:

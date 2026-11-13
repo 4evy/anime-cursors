@@ -7,7 +7,7 @@ name = "anime-cursors"
 version = "1.0.0"
 description = "Animeted Cursors on Linux"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 license = { file = "LICENSE.md" }
 keywords = ["cur", "ani", "x11", "windows", "win32", "cursor", "xcursor"]
 authors = [{ name = "ashuramaruzxc", email = "ashuramaru@tenjin-dk.com" }]
@@ -22,14 +22,13 @@ classifiers = [
   "Operating System :: POSIX :: Linux",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Topic :: Desktop Environment",
 ]
-dependencies = ["cursorgen", "pillow", "tqdm"]
+dependencies = ["cursorgen>=0.1.4", "opencv-python-headless", "tqdm"]
 
 [project.urls]
 "Homepage" = "https://github.com/ashuramaruzxc/anime-cursors"
@@ -55,7 +54,7 @@ plugins = ["numpy.typing.mypy_plugin"]
 
 [tool.black]
 line-length = 120
-target-version = ["py38", "py39", "py310", "py311", "py312"]
+target-version = ["py39", "py310", "py311", "py312"]
 
 [tool.isort]
 profile = "black"
