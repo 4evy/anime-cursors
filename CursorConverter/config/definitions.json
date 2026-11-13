@@ -1,16 +1,8 @@
 {
     "alternate": [
-        "bottom_left_corner",
-        "bottom_right_corner",
-        "bottom_side",
         "down-arrow",
-        "left_side",
         "left-arrow",
-        "right_side",
         "right-arrow",
-        "top_left_corner",
-        "top_right_corner",
-        "top_side",
         "up_arrow"
     ],
     "background": [
@@ -47,13 +39,17 @@
         "nw-resize",
         "nwse-resize",
         "se-resize",
-        "size_fdiag"
+        "size_fdiag",
+        "top_left_corner",
+        "bottom_right_corner"
     ],
     "diagonal2": [
         "ne-resize",
         "nesw-resize",
         "size_bdiag",
-        "sw-resize"
+        "sw-resize",
+        "top_right_corner",
+        "bottom_left_corner"
     ],
     "horizontal": [
         "e-resize",
@@ -61,7 +57,10 @@
         "h_double_arrow",
         "sb_h_double_arrow",
         "size_hor",
-        "w-resize"
+        "w-resize",
+        "left_side",
+        "right_side",
+        "col-resize"
     ],
     "vertical": [
         "n-resize",
@@ -71,7 +70,9 @@
         "sb_v_double_arrow",
         "size_ver",
         "split_v",
-        "v_double_arrow"
+        "v_double_arrow",
+        "top_side",
+        "bottom_side"
     ],
     "idle": [
         "default",
@@ -101,6 +102,7 @@
         "dnd_no_drop",
         "forbidden",
         "no_drop",
-        "not_allowed"
+        "not_allowed",
+        "not-allowed"
     ]
 }

@@ -36,6 +36,9 @@ It will create a directory `dist` with cursorname directory, thumbnail and
 simple index.theme file. Thumbnails are 320×320 PNGs generated with headless
 OpenCV, preserving transparency and nearest-neighbor sampling.
 
+Complete themes provide 76 Xcursor names. Edge and corner aliases use the
+corresponding resize cursors rather than the alternate-selection cursor.
+
 However, if you want to make a custom name and add a comment:
 
     python -m CursorConverter \
@@ -71,8 +74,6 @@ adhere to the terms of the license. See the
 ## HUGE TODO
 
 * Tag every cursor properly
-* Overall amount of xcursor files supposed to be 76 so have to fix somehow
-  `definitions_jp.json`
 * Restructure directories since we don't need static cursors here
 * Consider using devenv scripts for building cursors
 * Add set of packages similar to `pkgs.catppuccin-cursors`
